@@ -67,3 +67,4 @@ la_arts=find_attractions("Los Angeles, USA",['art'])
 print(la_arts)
 smills_france=get_attractions_for_traveler(['Dereck Smill', 'Paris, France', ['monument']])
 print(smills_france)
+
