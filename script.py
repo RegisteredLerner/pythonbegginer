@@ -53,7 +53,17 @@ def find_attractions(destination,interests):
 
     return attractions_with_interest
 
+def get_attractions_for_traveler(traveler):
+    traveler_destination=traveler[1]
+    traveler_interests=traveler[2]
+    traveler_attractions=find_attractions(traveler_destination,traveler_interests)
+    interest_string=interests_string="Hi "+traveler[0]+", we think you'll like these places around \n"
+    for attract in traveler_attractions:
+        interest_string += attract
+    return interest_string
 
 
 la_arts=find_attractions("Los Angeles, USA",['art'])
 print(la_arts)
+smills_france=get_attractions_for_traveler(['Dereck Smill', 'Paris, France', ['monument']])
+print(smills_france)
